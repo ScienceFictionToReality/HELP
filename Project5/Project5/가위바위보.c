@@ -136,3 +136,4 @@ void ranking(int Num) {
 	}
 
 }
+
