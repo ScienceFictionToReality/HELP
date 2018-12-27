@@ -1,7 +1,4 @@
 #include <stdio.h>
-#include <time.h>
-#include <stdlib.h> //³­¼ö rand(), srand() À§ÇØ »ç¿ë
-#include <string.h> // memcmp() À§ÇØ »ç¿ë
 
 int PlayerNum(void);
 void game(int Num);
@@ -129,4 +126,20 @@ void game(int Num) { // ÇÃ·¹ÀÌ¾î ¼ýÀÚ ¹Þ¾Æ¿È
 		printf("½Â¸® = %d , ÆÐ¹è = %d, ¹«½ÂºÎ = %d, ½Â·ü = %5.2f, Á¡¼ö = %d\n\n", DataArr[i].win, DataArr[i].lose, DataArr[i].draw, (float)DataArr[i].win / (DataArr[i].win + DataArr[i].lose + DataArr[i].draw) * 100, DataArr[i].score);
 
 	}
+}
+
+void record(void) {
+	FILE* fp;
+	char* fname = "c\\ ";
+
+	char* outFormat = "%s :: ½Â¸® = %d , ÆÐ¹è = %d, ¹«½ÂºÎ = %d, ½Â·ü = %5.2f, Á¡¼ö = %d\n";
+
+
+	fp = fopen(fname, "a")
+}
+
+fprintf(fp, outFormat, DataArr[k].name, DataArr[k].win, DataArr[k].lose, DataArr[k].draw, (float)DataArr[k].win / (DataArr[k].win + DataArr[k].lose + DataArr[k].draw) * 100, DataArr[k].score);
+
+}
+
 }
